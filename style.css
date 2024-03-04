@@ -1,35 +1,8 @@
+
+
+
 body{
-    display: grid;/*grid*/
     background-color: var(--cor_fundo);
-     grid-template-areas: 
-    "cab cab cab"
-    "pri pri pri"
-    "rod rod rod";
-    grid-auto-columns: auto;
-    grid-auto-rows: 100px auto 100px;
-    text-align: right;
-
-}
-section{
-    border: solid rgb(255, 255, 255) 10px;
-    border-radius: 20%;
-    height: 50px;
-    width: 200px;
-    margin: 0 0 0 900px;
-}
-header{
-    grid-area:cab;
-    text-align: center;
-
-}
-footer{
-    grid-area: rod;
-
-
-}
-main{
-    grid-area: pri;
-    
 }
 :root{
     --cor_botao_clicado:red;
@@ -38,20 +11,32 @@ main{
     --cor_titulo:pink;
 }
 h1{
-    color: var(--cor_titulo)
+    color: var(--cor_titulo);
+    text-align: center;
 
 }
-.primeiro{
-    color: var(--cor_botao_n_clicado);
-    color: var(--cor_botao_n_clicado);
-    border-radius: 15%;
-    margin-top: 30%;
-    margin: 15px;
+.principal{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    border: 10px solid red;
+    background-color: green;
+
 }
-.segundo{
-    color: var(--cor_botao_clicado);
-    color: var(--cor_botao_n_clicado);
+.botao{
+    height: 80px;
+    width: 300px;
+    box-shadow: 3px 6px 11px;
+    
 }
-.festa{
-    background-color: blueviolet;
+.botao:first-child{
+    border-radius: 30% 0 0 0;
+}
+.botao:last-child{
+    border-radius: 0 30% 0 0;
+}
+@media only screen and (max-width: 820px){
+    .principal{
+        display: flex;
+    }
 }
